@@ -12,6 +12,13 @@ ${data.desc}
 
 ## Table of Contents
 
+- [Installation](#Installation)\n
+- [Usage](#Usage)\n
+- [Credits](#Credits)\n
+- [Contributing](#Contributing)\n
+- [Tests](#Tests)\n
+- [Questions](#Questions)\n
+- [License](#License)\n
 
 ## Installation
 ${data.install}
@@ -22,7 +29,7 @@ ${data.usage}
 ## Credits
 ${data.credits}
 
-## How to Contribute
+## Contributing
 ${data.contribute}
 
 ## Tests
@@ -36,11 +43,33 @@ https://github.com/${data.gitHub}
 ${data.email}
 
 ### Other
-
+${data.questions}
 
 ## License
-
+${generateLicenseInfo(data.license)}
 `;
+
+function generateLicenseInfo(license) {
+    if (license === "MIT") {
+        const mit = `This application is covered under the MIT license (https://opensource.org/licenses/Apache-2.0)`;
+        return mit;
+        
+    } else if (license === "APACHE-2.0") {
+        const apache = `This application is covered under the Apache-2.0 license (https://opensource.org/licenses/Apache-2.0)`;
+        return apache;
+
+    } else if (license === "BOOST_1.0") {
+        const boost = `This application is covered under the Boost_1.0 license (https://www.boost.org/LICENSE_1_0.txt)`;
+        return boost;
+
+    } else if (license === "MPL-2.0") {
+        const mpl = `This application is covered under the Mozilla Public license 2.0 (https://opensource.org/licenses/MPL-2.0)`;
+        return mpl;
+    } else {
+        const noLicense = `No License`;
+        return noLicense;
+    }
+}
 
 function generateLicense(license) {
     if (license === "MIT") {
@@ -119,8 +148,8 @@ inquirer
     },
     {
         type: 'input',
-        message: 'Add additional questions on how to reach you',
-        name: 'contact',
+        message: 'Add additional questions',
+        name: 'questions',
     },
   ])
   .then((data) => {

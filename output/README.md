@@ -2,12 +2,26 @@
 # 
 
 ## Badges
-No License
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description
 
 
 ## Table of Contents
+
+- [Installation](#Installation)
+
+- [Usage](#Usage)
+
+- [Credits](#Credits)
+
+- [Contributing](#Contributing)
+
+- [Tests](#Tests)
+
+- [Questions](#Questions)
+
+- [License](#License)
 
 
 ## Installation
@@ -19,7 +33,7 @@ No License
 ## Credits
 
 
-## How to Contribute
+## Contributing
 
 
 ## Tests
@@ -36,3 +50,4 @@ https://github.com/undefined
 
 
 ## License
+This application is covered under the Apache-2.0 license (https://opensource.org/licenses/Apache-2.0)

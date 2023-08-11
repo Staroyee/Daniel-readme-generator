@@ -1,6 +1,9 @@
+//Enables enquirer to be used in a variable
 const inquirer = require('inquirer');
+//Enables fs to be used in a variable
 const fs = require('fs');
 
+//Markdown script for the generated readme.md file to be filled with the user input.
 const myReadme = (data) => `
 # ${data.title}
 
@@ -49,6 +52,7 @@ ${data.credits}
 ${generateLicenseInfo(data.license)}
 `;
 
+//Function to add the license info to the readme markdown script based on the license chosen by the user.
 function generateLicenseInfo(license) {
     if (license === "MIT") {
         const mit = `This application is covered under the MIT license (https://opensource.org/licenses/Apache-2.0)`;
@@ -71,6 +75,7 @@ function generateLicenseInfo(license) {
     }
 }
 
+//Function to add the license badge to the readme markdown script based on the license chosen by the user.
 function generateLicense(license) {
     if (license === "MIT") {
         const mit = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
@@ -93,6 +98,7 @@ function generateLicense(license) {
     }
 };
 
+//Inquirer function to create prompts in the command line to collect user input.
 inquirer
   .prompt([
     {
@@ -153,6 +159,8 @@ inquirer
         name: 'credits',
     },
   ])
+  
+  //Function to create a readme.md file in the 'output' folder and add the created markdown script to the file.
   .then((data) => {
     const readmeContent = myReadme(data);
     fs.writeFile('./output/README.md', readmeContent, (err) =>

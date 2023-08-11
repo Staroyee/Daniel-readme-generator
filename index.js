@@ -26,9 +26,6 @@ ${data.install}
 ## Usage
 ${data.usage}
 
-## Credits
-${data.credits}
-
 ## Contributing
 ${data.contribute}
 
@@ -37,13 +34,16 @@ ${data.test}
 
 ## Questions
 ### GitHub
-https://github.com/${data.gitHub}
+https://github.com/${data.github}
 
 ### Email
 ${data.email}
 
 ### Other
 ${data.questions}
+
+## Credits
+${data.credits}
 
 ## License
 ${generateLicenseInfo(data.license)}
@@ -115,11 +115,7 @@ inquirer
         message: 'Enter usage information',
         name: 'usage',
     },
-    {
-        type: 'input',
-        message: 'Enter any credits',
-        name: 'credits',
-    },
+    
     {
         type: 'input',
         message: 'Enter contribution guidelines',
@@ -127,7 +123,7 @@ inquirer
     },
     {
         type: 'input',
-        message: 'Enter test instructions',
+        message: 'Write test instructions for your application',
         name: 'test',
     },
     {
@@ -150,6 +146,11 @@ inquirer
         type: 'input',
         message: 'Add additional questions',
         name: 'questions',
+    },
+    {
+        type: 'input',
+        message: 'Enter any credits',
+        name: 'credits',
     },
   ])
   .then((data) => {

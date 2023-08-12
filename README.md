@@ -1,4 +1,4 @@
-# daniel-readme-dashboard
+# daniel-readme-generator
 
 ## Description
 I was tasked to create a command line application that would generate a high quality readme.md file based on user input.

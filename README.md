@@ -31,6 +31,9 @@ To use the site:
 2. Follow through the prompts by entering desired text.
 3. Once successfully completed, open the 'output' folder and view the generated readme.md file.
 
+## Walkthrough Video Link
+https://drive.google.com/file/d/1nTPyUuZEs1QOIkaz_vaK3RcY6EMc4rRD/view
+
 ## Screenshot
 ![alt text](./images/app.JPG)
 
